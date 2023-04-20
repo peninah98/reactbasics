@@ -1,24 +1,23 @@
 import logo from './logo.svg';
 import './App.css';
+import Header from './Component/Header';
+import Footer from './Component/Footer';
+import List from './Component/List';
 
 function App() {
+
+
+  const list=['penine', 'Kamana','Kamanzi']
+
+  const message = ()=>{
+    alert("Sure to leave this page?")
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <List list={list}  message={message} />
+      <Header />
+      <Footer />
+    </>
   );
 }
 
